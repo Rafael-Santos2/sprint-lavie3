@@ -1,51 +1,44 @@
 [
     {
-        "tipo": "Vestido_d",
-        "nome": "Terno de linho",
-        "marca": "Armani",
-        "imagem": null,
-        "disponivel": false
-    },
-    {
-        "tipo": "Terno_c",
-        "nome": "Yago",
-        "marca": "gucci",
-        "imagem": "..\/fotos\/682c6b9ab1885.png",
-        "disponivel": true
-    },
-    {
         "tipo": "Vestido_c",
         "nome": "djkhsakbldsjdgfgh",
         "marca": "wfegrfhdgfmhgj,hklj",
-        "imagem": "..\/fotos\/682348e785a16.png",
-        "disponivel": false
+        "imagem": "..\/uploads\/682348e785a16.png",
+        "disponivel": true
     },
     {
         "tipo": "Blazer",
         "nome": "magalas",
         "marca": "Armani",
-        "imagem": "..\/fotos\/68234a198d4c8.png",
-        "disponivel": true
+        "imagem": "..\/uploads\/68234a198d4c8.png",
+        "disponivel": false
     },
     {
         "tipo": "Smoking",
         "nome": "eu amo",
         "marca": "Armani7777",
-        "imagem": "..\/fotos\/68234a8d85762.png",
+        "imagem": "..\/uploads\/68234a8d85762.png",
         "disponivel": true
     },
     {
         "tipo": "Smoking",
         "nome": "yago",
         "marca": "Armani",
-        "imagem": "..\/fotos\/6823580e9a7ec.png",
+        "imagem": "..\/uploads\/6823580e9a7ec.png",
+        "disponivel": false
+    },
+    {
+        "tipo": "Vestido_c",
+        "nome": "natalia",
+        "marca": "fvghjkl\u00e7",
+        "imagem": "..\/uploads\/682c9714c2b57.png",
         "disponivel": true
     },
     {
-        "tipo": "Smoking",
-        "nome": "natalia",
-        "marca": "Armano",
-        "imagem": "..\/fotos\/682357eb29740.png",
+        "tipo": "Terno_c",
+        "nome": "Terno de linho",
+        "marca": "ford",
+        "imagem": "..\/uploads\/682c96a057a09.png",
         "disponivel": false
     }
 ]

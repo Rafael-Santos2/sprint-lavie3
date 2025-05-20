@@ -268,6 +268,27 @@ $usuario = Auth::getUsuario();
             color: #000000 !important;
             border: none;
         }
+        .btn-warning2{
+            background-color: rgb(248, 222, 162);
+            color: #000000 !important;
+            border: none;
+        }
+        .btn-warning2:hover{
+            background-color: rgb(168, 125, 16);
+            transition: 0.3s ease;
+            border: none;
+            color: #FFFFFF !important;
+        }
+        .calcular-btn {
+            background-color:rgb(167, 115, 70);
+            border-radius: 0px;
+            color: #FFFFFF;
+            transition: ease 0.5s;
+        }
+        .calcular-btn:hover {
+            background-color:rgb(220, 171, 132);
+            color: #000000;
+        }
     </style>
 </head>
 
@@ -543,7 +564,7 @@ $usuario = Auth::getUsuario();
                                         <tr>
                                             <td>
                                                 <?php if (!empty($roupa->getImagem())): ?>
-                                                    <img src="../fotos/<?= htmlspecialchars($roupa->getImagem()) ?>" alt="Imagem da Roupa" class="table-img">
+                                                    <img src="../uploads/<?= htmlspecialchars($roupa->getImagem()) ?>" alt="Imagem da Roupa" class="table-img">
                                                 <?php else: ?>
                                                     <span class="text-muted">Sem imagem</span>
                                                 <?php endif; ?>
@@ -574,7 +595,7 @@ $usuario = Auth::getUsuario();
                                                                     <button type="submit" name="devolver" class="text-white btn btn-warning btn-sm"><i class="bi bi-arrow-left-right"></i> Devolver</button>
                                                                 <?php else: ?> <!-- Roupa disponível: Campo de dias e Botão Alugar -->
                                                                     <button type="button"
-                                                                        class="btn btn-modal btn-success btn-sm"
+                                                                        class="btn btn-modal btn-success btn-sm mb-2"
                                                                         data-bs-toggle="modal"
                                                                         data-bs-target="#editarModal"
                                                                         data-nome="<?= htmlspecialchars($roupa->getNome()) ?>"
@@ -583,12 +604,16 @@ $usuario = Auth::getUsuario();
                                                                         <i class="bi bi-pencil-square"></i> Editar
                                                                     </button>
                                                                 <?php endif; ?>
+
+                                                                <?php if ($roupa->isDisponivel()): ?>
+                                                                    <button type="submit" name="alugar" class="btn btn-warning2 btn-sm"><i class="bi bi-bag-check"></i>  Alugar</button>
+                                                                <?php endif; ?>
+                                                            </div>
                                                             </div>
                                                         </form>
                                                     </div>
                                                 </td>
                                             <?php endif; ?>
-
                                             <?php if (!Auth::isAdmin()): ?>
                                                 <td>
                                                     <div class="action-wrapper">
@@ -598,19 +623,12 @@ $usuario = Auth::getUsuario();
 
                                                             <button
                                                                 type="button"
-                                                                class="btn btn-danger btn-sm calcular-btn"
+                                                                class="btn btn-sm calcular-btn"
                                                                 data-bs-toggle="modal"
                                                                 data-bs-target="#calculoModal"
                                                                 data-nome="<?= htmlspecialchars($roupa->getNome()) ?>"
-                                                                data-tipo="<?= basename(str_replace('\\', '/', get_class($roupa))) ?>">Calcular
+                                                                data-tipo="<?= basename(str_replace('\\', '/', get_class($roupa))) ?>"><i class="bi bi-calculator"></i>  Calcular
                                                             </button>
-
-
-                                                            <div class="rent-group">
-                                                                <?php if ($roupa->isDisponivel()): ?>
-                                                                    <button type="submit" name="alugar" class="btn btn-primary btn-sm">Alugar</button>
-                                                                <?php endif; ?>
-                                                            </div>
                                                         </form>
                                                     </div>
                                                 </td>
