@@ -543,7 +543,7 @@ $usuario = Auth::getUsuario();
                                         <tr>
                                             <td>
                                                 <?php if (!empty($roupa->getImagem())): ?>
-                                                    <img src="../uploads/<?= htmlspecialchars($roupa->getImagem()) ?>" alt="Imagem da Roupa" class="table-img">
+                                                    <img src="../fotos/<?= htmlspecialchars($roupa->getImagem()) ?>" alt="Imagem da Roupa" class="table-img">
                                                 <?php else: ?>
                                                     <span class="text-muted">Sem imagem</span>
                                                 <?php endif; ?>

@@ -10,42 +10,42 @@
         "tipo": "Terno_c",
         "nome": "Yago",
         "marca": "gucci",
-        "imagem": "..\/uploads\/682c6b9ab1885.png",
+        "imagem": "..\/fotos\/682c6b9ab1885.png",
         "disponivel": true
     },
     {
         "tipo": "Vestido_c",
         "nome": "djkhsakbldsjdgfgh",
         "marca": "wfegrfhdgfmhgj,hklj",
-        "imagem": "..\/uploads\/682348e785a16.png",
+        "imagem": "..\/fotos\/682348e785a16.png",
         "disponivel": false
     },
     {
         "tipo": "Blazer",
         "nome": "magalas",
         "marca": "Armani",
-        "imagem": "..\/uploads\/68234a198d4c8.png",
+        "imagem": "..\/fotos\/68234a198d4c8.png",
         "disponivel": true
     },
     {
         "tipo": "Smoking",
         "nome": "eu amo",
         "marca": "Armani7777",
-        "imagem": "..\/uploads\/68234a8d85762.png",
+        "imagem": "..\/fotos\/68234a8d85762.png",
         "disponivel": true
     },
     {
         "tipo": "Smoking",
         "nome": "yago",
         "marca": "Armani",
-        "imagem": "..\/uploads\/6823580e9a7ec.png",
+        "imagem": "..\/fotos\/6823580e9a7ec.png",
         "disponivel": true
     },
     {
         "tipo": "Smoking",
         "nome": "natalia",
         "marca": "Armano",
-        "imagem": "..\/uploads\/682357eb29740.png",
+        "imagem": "..\/fotos\/682357eb29740.png",
         "disponivel": false
     }
 ]
