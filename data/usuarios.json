@@ -1,32 +1,44 @@
 [
     {
-        "username": "admin",
-        "email": "",
-        "password": "$2y$12$o4puChG8n2ZuGN1LebhujOQo5tAWwlIppwZTHJXWPAcOhhzCby.Tq",
+        "username": "Rafael",
+        "email": "rafael.araujo@gmail.com",
+        "password": "$2y$12$OkbuHErUOpyvHFNn3RYhAuj3qZgi3EW21jVieR.QTRXgsryHiA3aW",
         "perfil": "admin"
     },
     {
-        "username": "usuario",
-        "email": "teste@gmail.com",
-        "password": "$2y$12$z1finJAqi7uzIyELV6.L1um7f5ucVT0g4G5Z205LPbekmVye5.8Eu",
-        "perfil": "usuario"
+        "username": "Alexandre",
+        "email": "alexandre.silva@gmail.com",
+        "password": "$2y$12$RFVKSwWYB9neaTEXS8ec8.vbVSy3oYH9u5nP1RrPuc1To9WOZ6y6G",
+        "perfil": "admin"
     },
     {
-        "username": "John Cena",
-        "email": "nothing@gmail.com",
-        "password": "$2y$12$azgX910HwmCkUhVkMtny4OcBoA78Q91TmFVoc.CBtxovvxSBP1B6m",
-        "perfil": "usuario"
+        "username": "Isabelli",
+        "email": "isabelli.nardin@gmail.com",
+        "password": "$2y$12$t4t7/TZqg39LyekB5ARzzud0/10N8DbWli2X9mPkHZFUF76V3YvWC",
+        "perfil": "admin"
     },
     {
-        "username": "John Wick",
-        "email": "wick@support.com",
-        "password": "$2y$12$h9Wue18P72Eo60PKBR7m3.XFcOSAHnfTJsWfP1lco48Av4luxEWaq",
-        "perfil": "usuario"
+        "username": "Sarah",
+        "email": "sarah.veiga@gmail.com",
+        "password": "$2y$12$gEYFLUHMDA1TNeVTKO4Heusft49kOeeGIm0z.hU.QZyYPSGYZdo6S",
+        "perfil": "admin"
     },
     {
-        "username": "Rafaelzinho234",
-        "email": "rafael.araujo@gmail.com",
-        "password": "$2y$12$BGIusMWk.OrrMBfAhysusu1fqgUE5GE3cqp1vMoImScTfhGT.NjF2",
-        "perfil": "usuario"
+        "username": "Livia",
+        "email": "livia.lyandra@gmail.com",
+        "password": "$2y$12$tVXO1.d0ltqdinY6xMtlauT41vYY1G7oEJ0pGIfiyRugePcoYa1pS",
+        "perfil": "admin"
+    },
+    {
+        "username": "Nicolly",
+        "email": "nicolly.barbosa@gmail.com",
+        "password": "$2y$12$pL84vJ/UITuuY9gMaW2My.okUv1F7TeOH2x7lfTsEYZF5P3LUvBau",
+        "perfil": "admin"
+    },
+    {
+        "username": "Natália",
+        "email": "natalia.carolin@gmail.com",
+        "password": "$2y$12$HWutBp0JLJpM./KfPvs9WOh4X7M5Rqeslqw7cqyyWqZOLPou5vZ6",
+        "perfil": "admin"
     }
 ]
