@@ -53,10 +53,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
             $ext = pathinfo($_FILES['imagem']['name'], PATHINFO_EXTENSION);
             $imagemNome = uniqid() . '.' . $ext;
-            $caminhoDestino = __DIR__ . '/../uploads/' . $imagemNome;
+            $caminhoDestino = __DIR__ . '/../img/' . $imagemNome;
 
             if (move_uploaded_file($_FILES['imagem']['tmp_name'], $caminhoDestino)) {
-                $imagem = '../uploads/' . $imagemNome; // Salva o caminho da imagem
+                $imagem = '../img/' . $imagemNome; // Salva o caminho da imagem
             }
         }
 
@@ -138,10 +138,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (isset($_FILES['imagem']) && $_FILES['imagem']['error'] === UPLOAD_ERR_OK) {
             $ext = pathinfo($_FILES['imagem']['name'], PATHINFO_EXTENSION);
             $imagemNome = uniqid() . '.' . $ext;
-            $caminhoDestino = __DIR__ . '/../uploads/' . $imagemNome;
+            $caminhoDestino = __DIR__ . '/../img/' . $imagemNome;
 
             if (move_uploaded_file($_FILES['imagem']['tmp_name'], $caminhoDestino)) {
-                $imagemNova = '../uploads/' . $imagemNome;
+                $imagemNova = '../img/' . $imagemNome;
             }
         }
 

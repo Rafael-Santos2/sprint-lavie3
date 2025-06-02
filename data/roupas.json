@@ -1,44 +1,37 @@
 [
     {
-        "tipo": "Vestido_c",
-        "nome": "djkhsakbldsjdgfgh",
-        "marca": "wfegrfhdgfmhgj,hklj",
-        "imagem": "..\/uploads\/682348e785a16.png",
-        "disponivel": true
-    },
-    {
         "tipo": "Blazer",
-        "nome": "magalas",
-        "marca": "Armani",
-        "imagem": "..\/uploads\/68234a198d4c8.png",
-        "disponivel": false
-    },
-    {
-        "tipo": "Smoking",
-        "nome": "eu amo",
-        "marca": "Armani7777",
-        "imagem": "..\/uploads\/68234a8d85762.png",
-        "disponivel": true
-    },
-    {
-        "tipo": "Smoking",
-        "nome": "yago",
-        "marca": "Armani",
-        "imagem": "..\/uploads\/6823580e9a7ec.png",
-        "disponivel": false
-    },
-    {
-        "tipo": "Vestido_c",
-        "nome": "natalia",
-        "marca": "fvghjkl\u00e7",
-        "imagem": "..\/uploads\/682c9714c2b57.png",
+        "nome": "Sobretudo Longo Chocolate",
+        "marca": "Tch\u00ea Inverno",
+        "imagem": "..\/img\/683dab6920db1.jpg",
         "disponivel": true
     },
     {
         "tipo": "Terno_c",
-        "nome": "Terno de linho",
-        "marca": "ford",
-        "imagem": "..\/uploads\/682c96a057a09.png",
+        "nome": "Terno Acetinado",
+        "marca": "Urban Basics",
+        "imagem": "..\/img\/683dab53d476f.jpg",
         "disponivel": false
+    },
+    {
+        "tipo": "Vestido_d",
+        "nome": "Vestido Casamento Delicado",
+        "marca": "St. Patrick",
+        "imagem": "..\/img\/683dab484bf15.jpg",
+        "disponivel": true
+    },
+    {
+        "tipo": "Blazer",
+        "nome": "Blazer Preto Masculino",
+        "marca": "COOFANDY",
+        "imagem": "..\/img\/683dab2611e96.png",
+        "disponivel": false
+    },
+    {
+        "tipo": "Vestido_l",
+        "nome": "Vestido floral branco Feminino",
+        "marca": "Beach Club",
+        "imagem": "..\/img\/683dab19653a5.jpg",
+        "disponivel": true
     }
 ]

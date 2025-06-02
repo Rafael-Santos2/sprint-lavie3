@@ -64,6 +64,8 @@
 /* Estilo do corpo da página */
 body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100%;
     width: 100%;
     background-position: center;
@@ -186,7 +188,7 @@ h5 {
     }
 
     .navbar {
-        height: auto;
+        height: auto !important;
         text-align: center;
         padding: 0.5rem 0;
     }
@@ -201,7 +203,6 @@ h5 {
         margin: 0;
     }
 }
-
 /* Estilo da barra de navegação */
 .navbar {
     height: 35px;
@@ -236,4 +237,34 @@ h5 {
 th {
     font-weight: bold;
     font-size: 1.1rem;
+}
+
+.link-custom {
+    color: #fff;
+    text-decoration: none;
+}
+
+.link-custom-line {
+    color: #fff;
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+.link-custom-line:hover {
+    color: black;
+}
+
+.custom-btn {
+    background-color: #927055 !important;
+    /* Sobrescreve o Bootstrap */
+    color: white;
+    border: none;
+    transition: ease 0.3s;
+    font-size: 1.2rem;
+}
+
+.brand-name {
+    font-family: 'Lemonada', cursive;
+    font-size: 1.5rem;
+    color: var(--prima-cl);
 }

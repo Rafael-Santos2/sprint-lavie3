@@ -12,15 +12,21 @@
         "perfil": "usuario"
     },
     {
-        "username": "RandomGuy87",
-        "email": "holy.cow3728@gmail.com",
-        "password": "$2y$12$peiGatsRqe0qArCz.\/TW8.6mU2bnWoZTNFJ355iaxhAda2B\/a1vqC",
+        "username": "John Cena",
+        "email": "nothing@gmail.com",
+        "password": "$2y$12$azgX910HwmCkUhVkMtny4OcBoA78Q91TmFVoc.CBtxovvxSBP1B6m",
         "perfil": "usuario"
     },
     {
-        "username": "John Doe",
-        "email": "john_doe@nolink.com",
-        "password": "$2y$12$umQQH\/sNgfzDoPexK\/qvze7UA3vUGCmD7YAYiwCh9IwrkykaqGxUe",
+        "username": "John Wick",
+        "email": "wick@support.com",
+        "password": "$2y$12$h9Wue18P72Eo60PKBR7m3.XFcOSAHnfTJsWfP1lco48Av4luxEWaq",
+        "perfil": "usuario"
+    },
+    {
+        "username": "Rafaelzinho234",
+        "email": "rafael.araujo@gmail.com",
+        "password": "$2y$12$BGIusMWk.OrrMBfAhysusu1fqgUE5GE3cqp1vMoImScTfhGT.NjF2",
         "perfil": "usuario"
     }
 ]

@@ -268,52 +268,69 @@ $usuario = Auth::getUsuario();
             color: #000000 !important;
             border: none;
         }
-        .btn-warning2{
+
+        .btn-warning2 {
             background-color: rgb(248, 222, 162);
             color: #000000 !important;
             border: none;
         }
-        .btn-warning2:hover{
+
+        .btn-warning2:hover {
             background-color: rgb(168, 125, 16);
             transition: 0.3s ease;
             border: none;
             color: #FFFFFF !important;
         }
+
         .calcular-btn {
-            background-color:rgb(167, 115, 70);
+            background-color: rgb(167, 115, 70);
             border-radius: 0px;
             color: #FFFFFF;
             transition: ease 0.5s;
         }
+
         .calcular-btn:hover {
-            background-color:rgb(220, 171, 132);
+            background-color: rgb(220, 171, 132);
             color: #000000;
+        }
+
+        .action-wrapper {
+            flex-direction: column !important;
+            max-width: 150px !important;
+        }
+
+        .status {
+            justify-content: center !important;
+            align-items: center !important;
+            padding: 7px !important;
         }
     </style>
 </head>
 
 <body>
-    <header class="custom-header container-fluid position-relative">
-        <i class="bi bi-person-circle"></i>
-        <h4>Bem vindo, <strong><?= htmlspecialchars($usuario['username']) ?></strong></h4>
-        <a href="?logout=1" class="btn btn-danger"><i class="bi bi-box-arrow-right"></i> Sair</a>
-    </header>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <?php if (Auth::isAdmin()): ?>
-            <ul>
-                <li><a href="#cadastrar">Cadastrar Produtos</a></li>
-                <li><a href="#roupas">Peças Cadastrados</a></li>
-                <li><a href="#roupas">Marcas</a></li>
-            </ul>
-        <?php else: ?>
-            <ul>
-                <!-- Lista de seções navegáveis (poderia ser transformada em links reais) -->
-                <li>Peças Disponiveis</li>
-                <li>Promoções</li>
-                <li>Alugar Peças</li>
-            </ul>
-        <?php endif; ?>
-    </nav>
+    <div class="headernav">
+        <header class="custom-header container-fluid position-relative">
+            <i class="bi bi-person-circle"></i>
+            <h4>Bem vindo, <strong><?= htmlspecialchars($usuario['username']) ?></strong></h4>
+            <a href="?logout=1" class="btn btn-danger"><i class="bi bi-box-arrow-right"></i> Sair</a>
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <?php if (Auth::isAdmin()): ?>
+                <ul>
+                    <li><a href="#cadastrar">Cadastrar Produtos</a></li>
+                    <li><a href="#roupas">Peças Cadastrados</a></li>
+                    <li><a href="#roupas">Marcas de Roupas</a></li>
+                </ul>
+            <?php else: ?>
+                <ul>
+                    <!-- Lista de seções navegáveis (poderia ser transformada em links reais) -->
+                    <li><a href="#roupas">Peças Disponiveis</a></li>
+                    <li><a href="#promocao-mes">Promoções do mês</a></li>
+                    <li><a href="#principais-pecas">Principais Peças</a></li>
+                </ul>
+            <?php endif; ?>
+        </nav>
+    </div>
     <div class="container py-4">
         <!-- Barra superior com informações do usuário -->
         <div class="row mb-4">
@@ -395,6 +412,10 @@ $usuario = Auth::getUsuario();
                                         </select>
                                     </div>
                                     <div class="mb-3">
+                                        <label for="quantidadePecas" class="form-label">Quantidade de peças</label>
+                                        <input type="number" name="quantidade_pecas" class="form-control custom-form-1" id="quantidadePecas" min="1" value="1" required>
+                                    </div>
+                                    <div class="mb-3">
                                         <label for="qtd_pecas" class="form-label">Quantidade de dias:</label>
                                         <input type="number" name="dias_calculo" class="form-control custom-form-1" min="1" value="1" required>
                                     </div>
@@ -414,7 +435,7 @@ $usuario = Auth::getUsuario();
 
             <!-- Seção principal da página contendo o carrossel de promoções -->
             <main class="container">
-                <h1 class="text-center mb-3 mt-3">Promoções do Mês</h1>
+                <h1 class="text-center mb-3 mt-3" id="promocao-mes">Promoções do Mês</h1>
 
                 <!-- Carrossel de imagens usando componente do Bootstrap -->
                 <div class="d-flex justify-content-center">
@@ -451,7 +472,7 @@ $usuario = Auth::getUsuario();
 
             <!-- Seção com 8 imagens de peças principais para aluguel -->
             <section class="container">
-                <h1 class="text-center mb-4 mt-4">Principais Peças</h1>
+                <h1 class="text-center mb-4 mt-4" id="principais-pecas">Principais Peças</h1>
 
                 <!-- Grid responsivo com 4 colunas por linha em dispositivos médios -->
                 <div class="row row-cols-1 row-cols-md-4 g-4">
@@ -460,50 +481,50 @@ $usuario = Auth::getUsuario();
                         <img src="../assets/peca-principal1.jpg" alt="Vestido Gucci com Laço" class="img-fluid">
                         <p>Vestido Gucci com Laço</p>
                         <!-- Botões de ação -->
-                        <button class="btn btn-sm custom-btn">Calcular aluguel</button>
-                        <button class="btn btn-sm btn-success">Alugar peça</button>
+                        <button class="btn btn-sm custom-btn rounded-1">Calcular aluguel</button>
+                        <button class="btn btn-sm btn-success mt-2 rounded-1">Alugar peça</button>
                     </div>
                     <div class="col text-center">
                         <img src="../assets/peca-principal2.jpg" alt="Vestido Casamento Delicado" class="img-fluid">
                         <p>Vestido Casamento Delicado</p>
-                        <button class="btn btn-sm custom-btn">Calcular aluguel</button>
-                        <button class="btn btn-sm btn-success">Alugar peça</button>
+                        <button class="btn btn-sm custom-btn rounded-1">Calcular aluguel</button>
+                        <button class="btn btn-sm btn-success mt-2 rounded-1">Alugar peça</button>
                     </div>
                     <div class="col text-center">
                         <img src="../assets/peca-principal3.jpg" alt="Vestido Lilás Madrinha" class="img-fluid">
                         <p>Vestido Lilás Madrinha</p>
-                        <button class="btn btn-sm custom-btn">Calcular aluguel</button>
-                        <button class="btn btn-sm btn-success">Alugar peça</button>
+                        <button class="btn btn-sm custom-btn rounded-1">Calcular aluguel</button>
+                        <button class="btn btn-sm btn-success mt-2 rounded-1">Alugar peça</button>
                     </div>
                     <div class="col text-center">
                         <img src="../assets/peca-principal4.jpg" alt="Vestido Prata de Gala" class="img-fluid">
                         <p>Vestido Prata de Gala</p>
-                        <button class="btn btn-sm custom-btn">Calcular aluguel</button>
-                        <button class="btn btn-sm btn-success">Alugar peça</button>
+                        <button class="btn btn-sm custom-btn rounded-1">Calcular aluguel</button>
+                        <button class="btn btn-sm btn-success mt-2 rounded-1">Alugar peça</button>
                     </div>
                     <div class="col text-center">
                         <img src="../assets/peca-principal5.jpg" alt="Terno Noivo Azul Marinho" class="img-fluid">
                         <p>Terno Noivo Azul Marinho</p>
-                        <button class="btn btn-sm custom-btn">Calcular aluguel</button>
-                        <button class="btn btn-sm btn-success">Alugar peça</button>
+                        <button class="btn btn-sm custom-btn rounded-1">Calcular aluguel</button>
+                        <button class="btn btn-sm btn-success mt-2 rounded-1">Alugar peça</button>
                     </div>
                     <div class="col text-center">
                         <img src="../assets/peca-principal6.jpg" alt="Terno Masculino Rosa" class="img-fluid">
                         <p>Terno Masculino - Rosa</p>
-                        <button class="btn btn-sm custom-btn">Calcular aluguel</button>
-                        <button class="btn btn-sm btn-success">Alugar peça</button>
+                        <button class="btn btn-sm custom-btn rounded-1">Calcular aluguel</button>
+                        <button class="btn btn-sm btn-success mt-2 rounded-1">Alugar peça</button>
                     </div>
                     <div class="col text-center">
                         <img src="../assets/peca-principal7.jpg" alt="Camiseta Polo Masculina" class="img-fluid">
                         <p>Camiseta Polo Masculina</p>
-                        <button class="btn btn-sm custom-btn">Calcular aluguel</button>
-                        <button class="btn btn-sm btn-success">Alugar peça</button>
+                        <button class="btn btn-sm custom-btn rounded-1">Calcular aluguel</button>
+                        <button class="btn btn-sm btn-success mt-2 rounded-1">Alugar peça</button>
                     </div>
                     <div class="col text-center">
                         <img src="../assets/peca-principal8.jpg" alt="Calça de Terno Comum" class="img-fluid">
                         <p>Calça de Terno Comum</p>
-                        <button class="btn btn-sm custom-btn">Calcular aluguel</button>
-                        <button class="btn btn-sm btn-success">Alugar peça</button>
+                        <button class="btn btn-sm custom-btn rounded-1">Calcular aluguel</button>
+                        <button class="btn btn-sm btn-success mt-2 rounded-1">Alugar peça</button>
                     </div>
                 </div>
             </section>
@@ -579,7 +600,7 @@ $usuario = Auth::getUsuario();
                                                 </span>
                                             </td>
                                             <?php if (Auth::isAdmin()): ?>
-                                                <td>
+                                                <td class="status">
                                                     <div class="action-wrapper">
                                                         <form method="post" class="btn-group-actions">
                                                             <input type="hidden" name="nome" value="<?= htmlspecialchars($roupa->getNome()) ?>">
@@ -606,132 +627,132 @@ $usuario = Auth::getUsuario();
                                                                 <?php endif; ?>
 
                                                                 <?php if ($roupa->isDisponivel()): ?>
-                                                                    <button type="submit" name="alugar" class="btn btn-warning2 btn-sm"><i class="bi bi-bag-check"></i>  Alugar</button>
+                                                                    <button type="submit" name="alugar" class="btn btn-warning2 btn-sm"><i class="bi bi-bag-check"></i> Alugar</button>
                                                                 <?php endif; ?>
                                                             </div>
-                                                            </div>
-                                                        </form>
                                                     </div>
-                                                </td>
-                                            <?php endif; ?>
-                                            <?php if (!Auth::isAdmin()): ?>
-                                                <td>
-                                                    <div class="action-wrapper">
-                                                        <form method="post" class="btn-group-actions">
-                                                            <input type="hidden" name="nome" value="<?= htmlspecialchars($roupa->getNome()) ?>">
-                                                            <input type="hidden" name="marca" value="<?= htmlspecialchars($roupa->getMarca()) ?>">
-
-                                                            <button
-                                                                type="button"
-                                                                class="btn btn-sm calcular-btn"
-                                                                data-bs-toggle="modal"
-                                                                data-bs-target="#calculoModal"
-                                                                data-nome="<?= htmlspecialchars($roupa->getNome()) ?>"
-                                                                data-tipo="<?= basename(str_replace('\\', '/', get_class($roupa))) ?>"><i class="bi bi-calculator"></i>  Calcular
-                                                            </button>
-                                                        </form>
-                                                    </div>
-                                                </td>
-                                            <?php endif; ?>
-                                        </tr>
-                                    <?php endforeach; ?>
-                                </tbody>
-                            </table>
+                                                    </form>
                         </div>
+                        </td>
+                    <?php endif; ?>
+                    <?php if (!Auth::isAdmin()): ?>
+                        <td>
+                            <div class="action-wrapper">
+                                <form method="post" class="btn-group-actions">
+                                    <input type="hidden" name="nome" value="<?= htmlspecialchars($roupa->getNome()) ?>">
+                                    <input type="hidden" name="marca" value="<?= htmlspecialchars($roupa->getMarca()) ?>">
+
+                                    <button
+                                        type="button"
+                                        class="btn btn-sm calcular-btn"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#calculoModal"
+                                        data-nome="<?= htmlspecialchars($roupa->getNome()) ?>"
+                                        data-tipo="<?= basename(str_replace('\\', '/', get_class($roupa))) ?>"><i class="bi bi-calculator"></i> Calcular
+                                    </button>
+                                </form>
+                            </div>
+                        </td>
+                    <?php endif; ?>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+                </table>
                     </div>
                 </div>
             </div>
         </div>
-        </main>
-        <!-- Modal de Cálculo -->
-        <div class="modal fade" id="calculoModal" tabindex="-1" aria-labelledby="calculoModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <form method="post" class="modal-content needs-validation" novalidate>
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="calculoModalLabel">Calcular Previsão de Aluguel</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                    </div>
-                    <div class="modal-body">
-                        <input type="hidden" name="nome_calculo" id="calculoNome">
+    </div>
+    </main>
+    <!-- Modal de Cálculo -->
+    <div class="modal fade" id="calculoModal" tabindex="-1" aria-labelledby="calculoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form method="post" class="modal-content needs-validation" novalidate>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="calculoModalLabel">Calcular Previsão de Aluguel</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="nome_calculo" id="calculoNome">
 
-                        <div class="mb-3">
-                            <label for="tipoCalculo" class="form-label">Tipo de vestimenta</label>
-                            <select class="form-select" id="tipoCalculo" name="tipo_calculo" required>
-                                <option value="Terno_c">Terno completo</option>
-                                <option value="Smoking">Smoking</option>
-                                <option value="Blazer">Blazer</option>
-                                <option value="Vestido_l">Vestido Longo</option>
-                                <option value="Vestido_c">Vestido Curto</option>
-                                <option value="Vestido_d">Vestido de Debutante</option>
-                            </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="quantidadePecas" class="form-label">Quantidade de peças</label>
-                            <input type="number" name="quantidade_pecas" class="form-control" id="quantidadePecas" min="1" value="1" required>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="diasCalculo" class="form-label">Quantidade de dias</label>
-                            <input type="number" name="dias_calculo" class="form-control" id="diasCalculo" min="1" value="1" required>
-                        </div>
+                    <div class="mb-3">
+                        <label for="tipoCalculo" class="form-label">Tipo de vestimenta</label>
+                        <select class="form-select" id="tipoCalculo" name="tipo_calculo" required>
+                            <option value="Terno_c">Terno completo</option>
+                            <option value="Smoking">Smoking</option>
+                            <option value="Blazer">Blazer</option>
+                            <option value="Vestido_l">Vestido Longo</option>
+                            <option value="Vestido_c">Vestido Curto</option>
+                            <option value="Vestido_d">Vestido de Debutante</option>
+                        </select>
                     </div>
-                    <div class="modal-footer">
-                        <button type="submit" name="calcular" class="btn btn-success w-100">Calcular Previsão</button>
+
+                    <div class="mb-3">
+                        <label for="quantidadePecas" class="form-label">Quantidade de peças</label>
+                        <input type="number" name="quantidade_pecas" class="form-control" id="quantidadePecas" min="1" value="1" required>
                     </div>
-                </form>
-            </div>
+
+                    <div class="mb-3">
+                        <label for="diasCalculo" class="form-label">Quantidade de dias</label>
+                        <input type="number" name="dias_calculo" class="form-control" id="diasCalculo" min="1" value="1" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" name="calcular" class="btn btn-success w-100">Calcular Previsão</button>
+                </div>
+            </form>
         </div>
+    </div>
 
-        <!-- Modal de Edição -->
-        <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="editarModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <form method="post" enctype="multipart/form-data" class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="editarModalLabel">Editar Roupa</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                    </div>
-                    <div class="modal-body">
-                        <input type="hidden" name="nome_original" id="editarNomeOriginal">
-                        <input type="hidden" name="id_produto" id="editarIdProduto"> <!-- Campo oculto para ID do produto -->
+    <!-- Modal de Edição -->
+    <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="editarModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form method="post" enctype="multipart/form-data" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editarModalLabel">Editar Roupa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="nome_original" id="editarNomeOriginal">
+                    <input type="hidden" name="id_produto" id="editarIdProduto"> <!-- Campo oculto para ID do produto -->
 
-                        <div class="mb-3">
-                            <label for="editarNome" class="form-label">Nome</label>
-                            <input type="text" class="form-control" id="editarNome" name="nome" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="editarMarca" class="form-label">Marca</label>
-                            <input type="text" class="form-control" id="editarMarca" name="marca" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="editarTipo" class="form-label">Tipo</label>
-                            <select class="form-select" id="editarTipo" name="tipo" required>
-                                <option value="Terno_c">Terno completo</option>
-                                <option value="Smoking">Smoking</option>
-                                <option value="Blazer">Blazer</option>
-                                <option value="Vestido_l">Vestido Longo</option>
-                                <option value="Vestido_c">Vestido Curto</option>
-                                <option value="Vestido_d">Vestido de Debutante</option>
-                            </select>
-                        </div>
+                    <div class="mb-3">
+                        <label for="editarNome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="editarNome" name="nome" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarMarca" class="form-label">Marca</label>
+                        <input type="text" class="form-control" id="editarMarca" name="marca" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarTipo" class="form-label">Tipo</label>
+                        <select class="form-select" id="editarTipo" name="tipo" required>
+                            <option value="Terno_c">Terno completo</option>
+                            <option value="Smoking">Smoking</option>
+                            <option value="Blazer">Blazer</option>
+                            <option value="Vestido_l">Vestido Longo</option>
+                            <option value="Vestido_c">Vestido Curto</option>
+                            <option value="Vestido_d">Vestido de Debutante</option>
+                        </select>
+                    </div>
 
-                        <!-- Campo de upload de imagem -->
-                        <div class="mb-3">
-                            <label for="editarImagem" class="form-label">Imagem</label>
-                            <input type="file" class="form-control" id="editarImagem" name="imagem">
-                            <small class="text-muted">Deixe em branco para manter a imagem atual.</small>
-                        </div>
-                        <div class="mb-3" id="imagemPreviewContainer" style="display: none;">
-                            <label for="imagemPreview" class="form-label">Imagem Atual</label>
-                            <img id="imagemPreview" src="" alt="Imagem atual" style="max-width: 100%; height: auto;">
-                        </div>
+                    <!-- Campo de upload de imagem -->
+                    <div class="mb-3">
+                        <label for="editarImagem" class="form-label">Imagem</label>
+                        <input type="file" class="form-control" id="editarImagem" name="imagem">
+                        <small class="text-muted">Deixe em branco para manter a imagem atual.</small>
                     </div>
-                    <div class="modal-footer">
-                        <button type="submit" name="editar" class="btn btn-success">Salvar Alterações</button>
+                    <div class="mb-3" id="imagemPreviewContainer" style="display: none;">
+                        <label for="imagemPreview" class="form-label">Imagem Atual</label>
+                        <img id="imagemPreview" src="" alt="Imagem atual" style="max-width: 100%; height: auto;">
                     </div>
-                </form>
-            </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" name="editar" class="btn btn-success">Salvar Alterações</button>
+                </div>
+            </form>
         </div>
+    </div>
     </div>
     <!-- Rodapé -->
     <footer style="background-color: #2a1e15; color: #fff; padding: 20px 10px; text-align: center; margin-top: 30px; margin-bottom: 0; width: 100%;">

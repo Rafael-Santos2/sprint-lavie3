@@ -19,20 +19,20 @@ $mensagem = '';
 $auth = new Auth();
 
 // Verificar se já foi autenticado
-if(Auth::verificarLogin()){
+if (Auth::verificarLogin()) {
     // Direcionar usuário para a tela principal
     header('Location: index.php');
     exit;
 }
 
 // Se o usuário não estiver logado / verifica se o formulário está correto
-if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'] ?? '';
     $email = $_POST['email'] ?? '';
     $password = $_POST['password'] ?? '';
 
     // Se a verificação na tela de login receber os dados de NOME e SENHA, ou envia para a outra tela, ou mostra a mensagem de erro
-    if($auth->login($username, $email, $password)){
+    if ($auth->login($username, $email, $password)) {
         header('Location: index.php');
         exit;
     } else {
@@ -45,6 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 <!-- Front End -->
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
     <!-- Link ícones do bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
+
     <link rel="stylesheet" href="load-css.php">
 
     <!-- CSS Interno -->
@@ -136,16 +137,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
                 margin-right: 20px;
             }
         }
+        .linkcad{
+            text-decoration: none;
+        }
     </style>
 
 </head>
+
 <body>
     <header class="header">
         <img src="../assets/logo-lavie.png" alt="Logo Lavie" class="logo">
     </header>
     <div class="login-container">
 
-    <!-- Criação de Cards Bootstrap -->
+        <!-- Criação de Cards Bootstrap -->
         <div class="card">
             <!-- Título do card -->
             <div class="card-header p-3">
@@ -155,8 +160,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
             <!-- Corpo do card -->
             <div class="card-body">
 
-            <?php if ($mensagem): ?>
-                <div class="alert alert-danger"><?= htmlspecialchars($mensagem) ?></div>
+                <?php if ($mensagem): ?>
+                    <div class="alert alert-danger"><?= htmlspecialchars($mensagem) ?></div>
                 <?php endif; ?>
                 <form method="post" class="needs-validation" novalidate>
                     <!-- Input - hidden | não aparece -->
@@ -173,7 +178,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
                         <label for="email" class="form-label">
                             E-Mail:
                         </label>
-                        <input type="email" name="email" class="form-control"  autocomplete="off" placeholder="Digite seu e-mail aqui..." id="email">
+                        <input type="email" name="email" class="form-control" autocomplete="off" placeholder="Digite seu e-mail aqui..." id="email">
                     </div>
                     <div class="mb-4 position-relative">
                         <label for="password" class="form-label">
@@ -185,8 +190,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
                             <i class="bi bi-eye-slash" id="olho"></i>
                         </span>
                     </div>
-                    <button type="submit" class="btn custom-btn col-md-3 d-block mx-auto mb-2 mt-2">Entrar</button>
+                    <div class="d-flex justify-content-center gap-2 mb-2 mt-2">
+                        <button type="submit" class="btn custom-btn col-md-3">Entrar</button>
+                        <a href="../index.php" class="btn custom-btn col-md-3">Voltar</a>
+                    </div>
+
                 </form>
+                <div style="text-align: center; text-transform: uppercase;" class="mt-3 ">
+                    <a href="signin.php" class="link-custom-line linkcad">não possui uma conta? crie uma clicando aqui!</a>
+                </div>
             </div>
         </div>
     </div>
@@ -208,4 +220,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         }
     </script>
 </body>
+
 </html>

@@ -30,8 +30,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
 
+        foreach ($usuarios as $usuario) {
+            if ($usuario['email'] === $email) {
+                $mensagem = 'Este e-mail já está cadastrado';
+                break;
+            }
+        }
+
         if ($existe) {
-            $message = "Este nome de usuário já está cadastrado.";
+            $message = "Este nome de usuário já está cadastrado";
         } else {
             // Criptografa a senha
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
@@ -46,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // Salva de volta no JSON
             file_put_contents($file, json_encode($usuarios, JSON_PRETTY_PRINT));
-            $message = "Cadastro realizado com sucesso!";
+            $message = 'Cadastro realizado com sucesso! Clique aqui para retornar!';
         }
     }
 }
@@ -56,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,7 +71,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <!-- Link ícones do bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>Signin - Locadora de Roupas</title>
     
+    
+
     <link rel="stylesheet" href="load-css.php">
     <style>
         .login-container {
@@ -193,12 +204,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <i class="bi bi-eye-slash" id="olho"></i>
                         </span>
                     </div>
-                    <div style="justify-content: center; display: flex; flex-direction: row;">                        
-                        <button type="submit" class="btn custom-btn col-md-3 d-block mx-auto mb-2 mt-2" value="Cadastrar">Criar conta</button>
+                    <div class="d-flex justify-content-center gap-2 mb-2 mt-2">
+                        <button type="submit" class="btn custom-btn text-nowrap">Cadastrar</button>
+                        <a href="../index.php" class="btn custom-btn text-nowrap">Voltar</a>
                     </div>
-                    <div style="text-align: center; text-transform: uppercase; color:#735943    " class="mt-3">
+                    <div style="text-align: center; text-transform: uppercase;" class="mt-3 ">
                         <?php if (!empty($message)): ?>
-                            <p><?= htmlspecialchars($message) ?></p>
+                            <a href="login.php" class="link-custom-line"><?= htmlspecialchars($message) ?></a>
                         <?php endif; ?>
                     </div>
                 </form>
