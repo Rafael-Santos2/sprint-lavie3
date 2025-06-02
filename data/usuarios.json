@@ -1,32 +1,44 @@
 [
     {
-        "username": "admin",
-        "email": "",
-        "password": "$2y$12$o4puChG8n2ZuGN1LebhujOQo5tAWwlIppwZTHJXWPAcOhhzCby.Tq",
-        "perfil": "admin"
-    },
-    {
-        "username": "usuario",
-        "email": "teste@gmail.com",
-        "password": "$2y$12$z1finJAqi7uzIyELV6.L1um7f5ucVT0g4G5Z205LPbekmVye5.8Eu",
+        "username": "Belli",
+        "email": "belli@gmail.com",
+        "password": "$2y$12$FEDO7n8g.iyH5EO1KG8kd.L8LyAOW\/5OMnvjOb9skyqpoGmZotFki",
         "perfil": "usuario"
     },
     {
-        "username": "John Cena",
-        "email": "nothing@gmail.com",
-        "password": "$2y$12$azgX910HwmCkUhVkMtny4OcBoA78Q91TmFVoc.CBtxovvxSBP1B6m",
+        "username": "Sarah",
+        "email": "sarah@gmail.com",
+        "password": "$2y$12$yYyZmeEz4Xz31GaYzTycF.Yz08e4ux\/BbmWFfrmCEmXAp1OqRMxZe",
         "perfil": "usuario"
     },
     {
-        "username": "John Wick",
-        "email": "wick@support.com",
-        "password": "$2y$12$h9Wue18P72Eo60PKBR7m3.XFcOSAHnfTJsWfP1lco48Av4luxEWaq",
+        "username": "Livia",
+        "email": "livia@gmail.com",
+        "password": "$2y$12$X82kfAGRY2qQWHuWMtO4HejJ14Vx7XyYcgVIlxraNMpi1qSRkMHUy",
         "perfil": "usuario"
     },
     {
-        "username": "Rafaelzinho234",
-        "email": "rafael.araujo@gmail.com",
-        "password": "$2y$12$BGIusMWk.OrrMBfAhysusu1fqgUE5GE3cqp1vMoImScTfhGT.NjF2",
+        "username": "Nicolly",
+        "email": "nicolly@gmail.com",
+        "password": "$2y$12$F1CkDUlGa\/DBpqzdOJhSWe6iyHDSBfZXgII6n0wE4JeurWlGW\/W0m",
+        "perfil": "usuario"
+    },
+    {
+        "username": "Natalia",
+        "email": "natalia@gmail.com",
+        "password": "$2y$12$Ff2w8LNuST37xWe2a4H8YOAvAqgUhU59gYuCNAljc2gGrgdCqGDLC",
+        "perfil": "usuario"
+    },
+    {
+        "username": "Rafael",
+        "email": "rafael@gmail.com",
+        "password": "$2y$12$v\/qEjV0OAcL\/VIDhlLypbuzVF7XTE0972dzvElRtPbc2ARkV1DMj6",
+        "perfil": "usuario"
+    },
+    {
+        "username": "Alexandre",
+        "email": "xandao@gmail.com",
+        "password": "$2y$12$sHRF\/O7GtRKPHBPXuFTBXeZNfKSRtxQn02ZL7Nn1wqM1x2OqRmrsi",
         "perfil": "usuario"
     }
 ]

@@ -68,16 +68,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+    <link rel="shortcut icon" href="../assets/logo-lv.png" type="image/x-icon">
     <!-- Link ícones do bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
     <title>Signin - Locadora de Roupas</title>
     
     
 
     <link rel="stylesheet" href="load-css.php">
     <style>
+        .linkcad{
+            text-decoration: none;
+        }
         .login-container {
             max-width: 400px;
             margin: auto;
@@ -210,7 +212,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                     <div style="text-align: center; text-transform: uppercase;" class="mt-3 ">
                         <?php if (!empty($message)): ?>
-                            <a href="login.php" class="link-custom-line"><?= htmlspecialchars($message) ?></a>
+                            <a href="login.php" class="link-custom-line linkcad"><?= htmlspecialchars($message) ?></a>
                         <?php endif; ?>
                     </div>
                 </form>
