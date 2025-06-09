@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="shortcut icon" href="../assets/logo-lv.png" type="image/x-icon">
     <!-- Link ícones do bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>Signin - Locadora de Roupas</title>
+    <title>Signin - La Vie</title>
     
     
 
