@@ -1,4 +1,4 @@
-# Funcionamento do Sistema de Locadora de Roupas com PHP e Bootstrap
+# Funcionamento do Sistema de Locação de Roupas com PHP e Bootstrap
 
 Este documento descreve o funcionamento do sistema de locadora de Roupas desenvolvido em PHP, utilizando o Bootstrap para a interface, com autenticação de usuários, gerenciamento de Roupas (carros e motos) e persistência de dados em arquivos JSON. O foco principal é explicar o funcionamento geral do sistema, com ênfase especial nos perfis de acesso (admin e usuário).
 
