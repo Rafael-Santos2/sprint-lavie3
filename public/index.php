@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Incluir o autoload
+// Incluir o autoload para facilitação
 require_once __DIR__ . '/../vendor/autoload.php';
 
 // Incluir o arquivo com as variáveis

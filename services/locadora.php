@@ -3,7 +3,7 @@
 namespace Services;
 
 use Models\{Roupa, Terno_c, Smoking, Blazer, Vestido_l, Vestido_c, Vestido_d};
-
+// constantes para os valores de aluguel
 class Locadora
 {
     private array $roupas = [];

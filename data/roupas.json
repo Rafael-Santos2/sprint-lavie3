@@ -1,12 +1,5 @@
 [
     {
-        "tipo": "Blazer",
-        "nome": "Sobretudo Longo Chocolate",
-        "marca": "Tch\u00ea Inverno",
-        "imagem": "..\/img\/683db705f1780.jpg",
-        "disponivel": true
-    },
-    {
         "tipo": "Terno_c",
         "nome": "Terno Acetinado",
         "marca": "Urban Basics",
@@ -15,9 +8,9 @@
     },
     {
         "tipo": "Vestido_d",
-        "nome": "Vestido Casamento Delicado",
+        "nome": "Vestido de Debutante Delicado",
         "marca": "St. Patrick",
-        "imagem": "..\/img\/683dd23f1fd7d.jpg",
+        "imagem": "..\/img\/68481eaf4dee2.jpg",
         "disponivel": true
     },
     {
@@ -31,7 +24,14 @@
         "tipo": "Vestido_l",
         "nome": "Vestido floral branco Feminino",
         "marca": "Beach Club",
-        "imagem": "..\/img\/683db73e1fc7d.jpg",
+        "imagem": "..\/img\/68482d3d8c659.jpg",
         "disponivel": true
+    },
+    {
+        "tipo": "Vestido_l",
+        "nome": "Vestido Longo",
+        "marca": "Zara",
+        "imagem": "..\/img\/6848267fad5ec.jpg",
+        "disponivel": false
     }
 ]

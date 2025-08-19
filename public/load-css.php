@@ -1,5 +1,5 @@
 <?php
-// Caminho real para o CSS (ajuste conforme necessário)
+// Caminho real para o CSS (ajuste conforme achar necessário)
 $cssFile = __DIR__ . '/../css/style.css';
 
 if (file_exists($cssFile)) {

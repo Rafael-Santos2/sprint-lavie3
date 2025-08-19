@@ -6,7 +6,7 @@ editarModal.addEventListener('show.bs.modal', function (event) {
     const marca = button.getAttribute('data-marca');
     const tipo = button.getAttribute('data-tipo');
     const imagem = button.getAttribute('data-imagem');
-    const idProduto = button.getAttribute('data-id'); // Aqui você pega o ID do produto
+    const idProduto = button.getAttribute('data-id'); // Aqui você coleta/pega o ID do produto
 
     // Preencher os campos com as informações atuais do produto
     document.getElementById('editarNome').value = nome;

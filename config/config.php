@@ -1,5 +1,5 @@
 <?php
-// Arquivo de configuração com as constantes do sistema
+// Arquivo com configuração com as constantes do sistema
 
 // Criando variável "ARQUIVO JSON" que envia para outro diretório
 define('ARQUIVO_JSON', __DIR__ . '/../data/roupas.json');

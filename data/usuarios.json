@@ -40,5 +40,11 @@
         "email": "xandao@gmail.com",
         "password": "$2y$12$sHRF\/O7GtRKPHBPXuFTBXeZNfKSRtxQn02ZL7Nn1wqM1x2OqRmrsi",
         "perfil": "admin"
+    },
+    {
+        "username": "Gustavo",
+        "email": "gustavo@gmail.com",
+        "password": "$2y$12$yunU.9yXUOPEpvrKc5te.eX4CUIKKIgaGojsU2R0UzZZLTJBqZnui",
+        "perfil": "usuario"
     }
 ]

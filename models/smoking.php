@@ -3,7 +3,7 @@
 namespace Models;
 
 use Interfaces\Locavel;
-
+// Classe Smoking
 class Smoking extends Roupa implements Locavel
 {
     private ?string $imagem;

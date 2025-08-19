@@ -3,7 +3,7 @@
 namespace Models;
 
 use Interfaces\Locavel;
-
+// Classe Terno_c
 class Terno_c extends Roupa implements Locavel
 {
     private ?string $imagem;

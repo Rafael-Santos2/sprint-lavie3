@@ -2,7 +2,7 @@
 
 namespace Models;
 
-// Classe abstrata para todos os tipos de Roupas
+// Classe abstratam que serve para todos os tipos de Roupas
 abstract class Roupa
 {
     private string $nome;

@@ -1,5 +1,5 @@
 <?php
-// Caminho correto do arquivo JSON
+// Caminho correto a ser perseguido do arquivo JSON
 $file = __DIR__ . '/../data/usuarios.json';
 
 $message = '';

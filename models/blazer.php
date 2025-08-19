@@ -1,7 +1,7 @@
 <?php
 namespace Models;
 use Interfaces\Locavel;
-
+// classe Blazer
 class Blazer extends Roupa implements Locavel {
     private ?string $imagem;
 

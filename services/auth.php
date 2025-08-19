@@ -1,7 +1,7 @@
 <?php
 // Define espaço para organização do código
 namespace Services;
-
+// classe Auth
 class Auth{
     private array $usuarios = [];
 

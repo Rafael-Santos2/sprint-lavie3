@@ -623,7 +623,7 @@ $usuario = Auth::getUsuario();
                                                                         data-nome="<?= htmlspecialchars($roupa->getNome()) ?>"
                                                                         data-marca="<?= htmlspecialchars($roupa->getMarca()) ?>"
                                                                         data-tipo="<?= basename(str_replace('\\', '/', get_class($roupa))) ?>">
-                                                                        <i class="bi bi-pencil-square"></i> Editar
+                                                                        <i class="bi bi-pencil-square"></i>  Editar
                                                                     </button>
                                                                 <?php endif; ?>
 
